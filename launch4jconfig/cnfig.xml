@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>out\artifacts\capstoneC868\capstoneC868.jar</jar>
+  <outfile>C:\Users\manue\IdeaProjects\capstoneC868\capstoneC868.exe</outfile>
+  <errTitle>Please install Java 17</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe (sha256 )</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\manue\IdeaProjects\capstoneC868\src\main\resources\org\manuel\images\appLogoIcon.ico</icon>
+  <singleInstance>
+    <mutexName>CWL Booking App</mutexName>
+    <windowTitle>CWL Booking App</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJdk</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+    <opt>-p C:\Users\manue\IdeaProjects\capstoneC868\lib\javafx-sdk-17.0.1\lib\javafx.base.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\mysql-connector-java\mysql-connector-java-8.0.23.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\mysql-connector-java\mysql-connector-java-8.0.23-sources.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\javafx-sdk-17.0.1\lib\javafx.graphics.jar;C:\Users\manue\IdeaProjects\capstoneC868\out\production\capstoneC868;C:\Users\manue\IdeaProjects\capstoneC868\lib\fontawesome-4.7.0-9.1.2\fontawesomefx-commons-9.1.2.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\fontawesome-4.7.0-9.1.2\fontawesomefx-fontawesome-4.7.0-9.1.2.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\javafx-sdk-17.0.1\lib\javafx.controls.jar;C:\Users\manue\IdeaProjects\capstoneC868\lib\javafx-sdk-17.0.1\lib\javafx.fxml.jar -m org.manuel/org.manuel.Main</opt>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.0.0.0</txtFileVersion>
+    <fileDescription>Booking Software</fileDescription>
+    <copyright>NIL</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1.0.0.0</txtProductVersion>
+    <productName>CWL Booking App</productName>
+    <companyName>CoWorking Lots</companyName>
+    <internalName>CWLBooking</internalName>
+    <originalFilename>CWLBooking.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <bundledJreErr>This application requires a Java Runtime Environment.</bundledJreErr>
+    <jreVersionErr>This application requires a Java Runtime Environment</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>

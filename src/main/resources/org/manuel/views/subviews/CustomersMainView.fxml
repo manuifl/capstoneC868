@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" stylesheets="@../../styles/stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.manuel.controllers.CustomersMainViewController">
+    <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+                <HBox alignment="CENTER_LEFT" prefWidth="1021.0" spacing="10.0" styleClass="control-bar-container">
+                    <children>
+                        <Label prefWidth="54.0" text="Search By:" />
+                        <ComboBox fx:id="searchByCB" onAction="#handleSearchByCB" prefWidth="117.0" promptText="Select A Filter" />
+                        <TextField fx:id="searchTextField" disable="true" prefWidth="227.0" promptText="Search" />
+                    </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </HBox>
+            <HBox prefWidth="1021.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                         <TableView fx:id="customersTableView" VBox.vgrow="ALWAYS">
+                             <placeholder>
+                                 <Label fx:id="customerTablePlaceHolder" text="" />
+                             </placeholder>
+                             <columns>
+                                 <TableColumn fx:id="customerIdCol" maxWidth="50.0" minWidth="50.0" prefWidth="-1.0" resizable="false" text="ID" />
+                                 <TableColumn fx:id="customerNameCol" prefWidth="147.0" text="Name" />
+                                 <TableColumn fx:id="customerAddressCol" prefWidth="156.0" text="Address" />
+                                 <TableColumn fx:id="customerPostalCodeCol" prefWidth="104.0" text="Postal Code" />
+                                 <TableColumn fx:id="customerPhoneCol" prefWidth="122.0" text="Phone" />
+                                 <TableColumn fx:id="customerCityCol" prefWidth="115.0" text="City" />
+                             </columns>
+                             <padding>
+                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                             </padding>
+                             <columnResizePolicy>
+                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                             </columnResizePolicy>
+                         </TableView>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="container-separator" />
+                  <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                              <VBox alignment="TOP_CENTER" prefWidth="297.0" spacing="10.0">
+                                  <children>
+                                      <Label fx:id="customerNameLabel" alignment="TOP_CENTER" prefHeight="27.0" text="Account  Information" textAlignment="CENTER">
+                                          <font>
+                                              <Font size="20.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                      </Label>
+                                        <Label fx:id="statusLabel" alignment="CENTER" prefHeight="20.0" text="Member Status">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                  </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" prefWidth="297.0" spacing="10.0">
+                                  <children>
+                                      <Label alignment="TOP_CENTER" prefHeight="17.0" text="Contact Information" textAlignment="CENTER">
+                                          <font>
+                                              <Font size="16.0" />
+                                          </font>
+                                          <VBox.margin>
+                                              <Insets />
+                                          </VBox.margin>
+                                      </Label>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" spacing="10.0">
+                                 <children>
+                                            <Label fx:id="addressLabel" alignment="CENTER" prefHeight="20.0" text="Street">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <graphic>
+                                                    <FontAwesomeIconView boundsType="VISUAL" fill="#6f0157" glyphName="MAP_MARKER" size="22.0" />
+                                                </graphic>
+                                            </Label>
+                                            <HBox alignment="CENTER" prefHeight="20.0" spacing="5.0">
+                                                <children>
+                                                    <Label fx:id="cityLabel" alignment="CENTER" text="City" />
+                                                    <Label fx:id="stateLabel" alignment="CENTER" text="State" />
+                                                    <Label fx:id="postalCodeLabel" alignment="CENTER" text="Zipcode">
+                                                        <font>
+                                                            <Font name="System Italic" size="12.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <Label fx:id="countryLabel" alignment="CENTER" text="Country" />
+                                                </children>
+                                            </HBox>
+                                            <Label fx:id="emailLabel" alignment="CENTER" prefHeight="20.0" text="Email">
+                                                <graphic>
+                                                    <FontAwesomeIconView boundsType="VISUAL" fill="#fae300" glyphName="ENVELOPE" size="20.0" />
+                                                </graphic>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                            </Label>
+                                            <Label fx:id="phoneLabel" alignment="CENTER" prefHeight="20.0" text="Phone Number">
+                                                <graphic>
+                                                    <FontAwesomeIconView boundsType="VISUAL" fill="#009026" glyphName="PHONE" size="20.0" />
+                                                </graphic>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                            </Label>
+                                 </children>
+                              </VBox>
+                                  </children>
+                              </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="278.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                                    <TableView fx:id="customerAppointmentsTable" prefHeight="188.0" VBox.vgrow="ALWAYS">
+                                        <placeholder>
+                                            <Label fx:id="appointmentsTablePlaceHolder" text="" />
+                                        </placeholder>
+                                        <columns>
+                                            <TableColumn fx:id="titleCol" editable="false" prefWidth="278.0" sortable="false" text="Upcoming Appointments" />
+                                        </columns>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                    </TableView>
+                                    <HBox alignment="CENTER" spacing="20.0">
+                                        <children>
+                                            <Button fx:id="editCustomerAppointments" mnemonicParsing="false" onAction="#handleEditCustomerAppointments" prefHeight="30.0" prefWidth="132.0" styleClass="data-action-buttons" text="Edit Booking">
+                                                <graphic>
+                                                    <FontAwesomeIconView boundsType="VISUAL" glyphName="EDIT" size="20.0" />
+                                                </graphic>
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                            </Button>
+                                            <Button fx:id="makeAppointmentButton" graphicTextGap="6.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleMakeAppointmentButton" prefHeight="30.0" prefWidth="132.0" styleClass="data-action-buttons" text="Add Booking" textFill="#00831a">
+                                                <graphic>
+                                                    <FontAwesomeIconView boundsType="VISUAL" fill="#00831a" glyphName="CALENDAR_PLUS_ALT" size="20.0" />
+                                                </graphic>
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                            </Button>
+                                        </children>
+                                    </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1021.0" spacing="20.0" style="-fx-background-color: #4da9fa;">
+                      <children>
+                          <Button fx:id="editButton" graphicTextGap="6.0" mnemonicParsing="false" onAction="#handleEditButton" prefWidth="151.0" styleClass="data-action-buttons" text="Edit Customer">
+                              <graphic>
+                                  <FontAwesomeIconView boundsType="VISUAL" glyphName="EDIT" size="20.0" />
+                              </graphic>
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Button>
+                          <Button fx:id="addButton" graphicTextGap="6.0" mnemonicParsing="false" onAction="#handleAddButton" prefWidth="151.0" styleClass="data-action-buttons" text="Add Customer" textFill="#00831a">
+                              <graphic>
+                                  <FontAwesomeIconView boundsType="VISUAL" fill="#00831a" glyphName="USER_PLUS" size="20.0" />
+                              </graphic>
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Button>
+                          <Button fx:id="deleteButton" graphicTextGap="6.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="30.0" styleClass="data-action-buttons" text="Delete Customer" textFill="#b00404">
+                              <graphic>
+                                  <FontAwesomeIconView boundsType="VISUAL" fill="#b00404" glyphName="USER_TIMES" size="20.0" />
+                              </graphic>
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Button>
+                      </children>
+                  </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

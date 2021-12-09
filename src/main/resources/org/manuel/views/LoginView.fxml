@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" stylesheets="@../styles/stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.manuel.controllers.LoginViewController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: -fx-outer-border, -fx-color,#0589ff; -fx-background-insets: 0, 1 , 0 2 0 0;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitWidth="500.0" layoutX="50.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/CoWorkingLotsWhiteLogo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+            <HBox layoutX="180.0" layoutY="570.0" spacing="50.0">
+               <children>
+                      <Button fx:id="loginButton" defaultButton="true" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="35.0" prefWidth="95.0" styleClass="submit-buttons" text="Login">
+                          <graphic>
+                              <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" fontSmoothingType="LCD" glyphName="SIGN_IN" size="20.0" />
+                          </graphic>
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="closeButton" cancelButton="true" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleCloseButton" prefHeight="35.0" prefWidth="95.0" styleClass="cancel-buttons" text="Close">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                      </Button>
+               </children>
+            </HBox>
+                <PasswordField fx:id="passwordTextField" layoutX="215.0" layoutY="383.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="222.0" promptText="Please Type Your Password" styleClass="login-inputs" />
+                <Label fx:id="statusMessageLabel" alignment="CENTER" layoutX="140.0" layoutY="445.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="320.0" textAlignment="CENTER" />
+                <TextField fx:id="userNameTextField" layoutX="215.0" layoutY="333.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="222.0" promptText="Please Type Your User Name" styleClass="login-inputs" />
+                <ImageView fx:id="lockIconImageView" fitHeight="70.0" fitWidth="49.0" layoutX="276.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/LockIconBlue.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="zoneIdLabel" alignment="CENTER" layoutX="140.0" layoutY="502.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="320.0" text="TimeZone" />
+                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="175.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/singleUserBlue.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="175.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/keyIconBlue.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="loginTitleLabel" alignment="CENTER" layoutY="196.0" prefHeight="35.0" prefWidth="600.0" text="User Login" textFill="#0589ff">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
