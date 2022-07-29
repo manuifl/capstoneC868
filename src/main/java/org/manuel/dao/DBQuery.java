@@ -5,6 +5,7 @@
  */
 package org.manuel.dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,6 +17,9 @@ import java.sql.SQLException;
 public class DBQuery {
     
     private static PreparedStatement preparedStatement;
+
+
+    private static CallableStatement callableStatement;
 
     /**
      * Creates a PreparedStatement 
@@ -33,6 +37,16 @@ public class DBQuery {
      */
     public static PreparedStatement getPreparedStatement() {
         return preparedStatement;
+    }
+
+
+    public static CallableStatement getCallableStatement() {
+        return callableStatement;
+    }
+
+    public static void setCallableStatement(Connection conn, String sqlStatement) throws SQLException {
+        callableStatement = conn.prepareCall(sqlStatement);
+        //{call insertR(?,?)}
     }
 
 }
