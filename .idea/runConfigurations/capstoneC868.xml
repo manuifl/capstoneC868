@@ -1,5 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="capstoneC868" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="18" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <envs>
       <env name="PATH_TO_FX" value="C:\javaLibraries\openjfx-17.0.1_windows-x64_bin-sdk\javafx-sdk-17.0.1\lib" />
     </envs>

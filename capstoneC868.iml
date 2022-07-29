@@ -6,13 +6,15 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="18" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="junit-5.7.1" level="project" />
     <orderEntry type="library" name="fontawesome-4.7.0-9.1" level="project" />
-    <orderEntry type="library" name="mysql-connector-java" level="project" />
-    <orderEntry type="library" name="javafx-sdk-17.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="JUnit4" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.30" level="project" />
+    <orderEntry type="library" name="javafx-sdk-18.0.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="JUnit5.7.0" level="project" />
   </component>
 </module>
