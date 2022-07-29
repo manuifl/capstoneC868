@@ -1,16 +1,12 @@
 package org.manuel.controllers;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -21,10 +17,7 @@ import org.manuel.utilities.UserLogger;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
@@ -47,9 +40,6 @@ public class LoginViewController implements Initializable {
     private Label zoneIdLabel;
 
     @FXML
-    private StackPane loginStackPane;
-
-    @FXML
     private Button loginButton;
 
     @FXML
@@ -60,7 +50,7 @@ public class LoginViewController implements Initializable {
     Stage stage;
     ZoneId zoneId = ZoneId.systemDefault();
     Locale locale = Locale.getDefault();
-    private static final String FILENAME = "resources/login";
+    //private static final String FILENAME = "resources/login";
     ResourceBundle resourceBundle;
 
 
@@ -73,8 +63,8 @@ public class LoginViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-//        userNameTextField.setText("test");
-//        passwordTextField.setText("testPass");
+        userNameTextField.setText("admin");
+        passwordTextField.setText("adminPass");
         statusMessageLabel.setTextFill(Color.web("#ff0000"));
         if(Main.getConn() == null){
             statusMessageLabel.setText("Connection Failed: Please check your internet connection");
@@ -89,7 +79,7 @@ public class LoginViewController implements Initializable {
             loginButton.setText(rb.getString("signIn"));
             closeButton.setText(rb.getString("close"));
             String zoneIdInfo = zoneId.toString();
-            String localeInfo = locale.toString();
+            //String localeInfo = locale.toString();
             zoneIdLabel.setText(rb.getString("zoneInfo") + " " + zoneIdInfo);
 
         } catch (MissingResourceException e) {
